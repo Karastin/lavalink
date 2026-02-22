@@ -1,10 +1,22 @@
 server:
   port: 2333
+  address: 0.0.0.0
+
+plugins:
 
 lavalink:
+  plugins:
+    # 유튜브 검색/재생용 플러그인
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.8.3"
+      repository: "https://maven.lavalink.dev/releases"
   server:
     password: "youshallnotpass"
-
-logging:
-  level:
-    root: INFO
+    sources:
+      # 기본 유튜브 소스는 deprecated → 플러그인 사용 권장
+      youtube: false
+      soundcloud: true
+      bandcamp: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false

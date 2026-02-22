@@ -6,7 +6,7 @@ lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: false
+      youtube: false   # ✅ 기본 유튜브 소스 끄기(중요)
       soundcloud: true
       bandcamp: true
       twitch: true
@@ -17,5 +17,17 @@ lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.17.0"
       repository: "https://maven.lavalink.dev/releases"
+      snapshot: false
 
-plugins: {}
+# ✅ 플러그인 기능 설정(검색 허용 등)
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+
+logging:
+  level:
+    root: INFO
+    dev.lavalink.youtube: DEBUG   # 유튜브 플러그인 로그 더 보기

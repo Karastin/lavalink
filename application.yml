@@ -2,13 +2,7 @@ server:
   port: 2333
   address: 0.0.0.0
 
-plugins: { }
-
 lavalink:
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.17.0"
-      repository: "https://maven.lavalink.dev/releases"
-
   server:
     password: "youshallnotpass"
     sources:
@@ -19,3 +13,9 @@ lavalink:
       vimeo: true
       http: true
       local: false
+
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.17.0"
+      repository: "https://maven.lavalink.dev/releases"
+
+plugins: {}

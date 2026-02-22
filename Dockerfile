@@ -1,4 +1,5 @@
 FROM eclipse-temurin:17-jre
+# cache-bust-1
 WORKDIR /app
 
 ADD https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lavalink.jar /app/Lavalink.jar

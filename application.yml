@@ -13,11 +13,9 @@ lavalink:
       vimeo: true
       http: true
       local: false
-
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.17.0"
       repository: "https://maven.lavalink.dev/releases"
-      snapshot: false
 
 plugins:
   youtube:
